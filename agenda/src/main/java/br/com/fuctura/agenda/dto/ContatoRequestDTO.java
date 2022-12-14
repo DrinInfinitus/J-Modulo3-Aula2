@@ -5,6 +5,8 @@ public class ContatoRequestDTO {
 	private String nome;
 	private Double altura;
 	private Long idade;
+	
+	
 	public String getNome() {
 		return nome;
 	}
