@@ -30,4 +30,49 @@ public class ContatoServiceIMPL implements IContatoService{
 		System.out.println("STARTING TO BECOME A REAL GOD OF WAR");
 	}
 
+
+
+	@Override
+	public List<ContatoRequestDTO> obterTodos() {
+		return contatos;
+	}
+
+
+
+	@Override
+	public ContatoRequestDTO obter(String nome) {
+		// TODO Auto-generated method stub
+//		for (ContatoRequestDTO c : this.contatos) {
+//			if(c.getNome().equals(nome)) {
+//				return c;
+//			}
+//		}
+//		
+		for(int i = 0; i< this.contatos.size(); i++) {
+			if (contatos.get(i).getNome().equals(nome)) {
+			return contatos.get(i);
+			}
+	}
+////		//java 8 streams
+//		var cc = this.contatos.stream().filter(c -> c.getNome().equals(nome)).findFirst();
+//		return cc.isPresent() ? cc.get() : null;
+//	
+//	}
+		return null;
+
+}
+
+	@Override
+	public void atualizar(ContatoRequestDTO object) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void excluir(String nome) {
+		// TODO Auto-generated method stub
+		
+	}
 }
